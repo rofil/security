@@ -1,7 +1,6 @@
 {
     "name": "rofilde/laravel-security",
     "description": "Basic Security for Laravel Framework",
-    "type": "laravel package",
     "license": "MIT",
     "authors": [
         {
