@@ -1,4 +1,4 @@
-@extends("RofilFTIK::one-column")
+@extends("RofilBT::one-column")
 
 @section("content")
 
@@ -6,7 +6,7 @@
 
 <hr>
 
-{!! Form::open(array('url' => 'foo/bar')) !!}
+{!! Form::open(array('url' => route("RofilSecurity.login.proses"))) !!}
     <div class="form-group">
         <label for="username">Username</label>
         {!! Form::text('username', null, ['class'=>'form-control']) !!}
