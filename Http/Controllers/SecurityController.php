@@ -29,6 +29,8 @@ class SecurityController extends Controller
         $users = User::where('email', $request->get('username'))->where('password',$request->get('password'))->get();
         if($users->count() > 0){
             Auth::login($users->first());
+            return redirect()->intended();
+            
             return redirect()->to('/')->with("message", ['alert'=> 'success', 'message'=> 'Welcome '.$users->first()->name.'.'. ' You successfully logged in.']);
         }
         return redirect()->back()->with("message", ['alert'=> 'danger', 'message'=> 'Combination Username and Password is not match']);
